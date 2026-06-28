@@ -1,0 +1,6 @@
+{
+  "name": "GenomeTree",
+  "description": "스마트 팜 시설 기반 DNA 인증 묘목 및 삽수 거래 및 이력 조회 대시보드 시스템",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
