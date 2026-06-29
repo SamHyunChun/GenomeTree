@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+html {
+  font-size: 130% !important;
+}
+
+/* Scale pixel-based arbitrary font classes up by 30% to match global scaling */
+.text-\[9px\] {
+  font-size: 11.7px !important;
+}
+
+.text-\[10px\] {
+  font-size: 13px !important;
+}
+
+.text-\[11px\] {
+  font-size: 14.3px !important;
+}
+
