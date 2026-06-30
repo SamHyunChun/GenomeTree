@@ -71,7 +71,7 @@ export default function GenomeTreeIntro() {
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
             세계 최초 은행나무 게놈 10.6Gb 해독 및 상용화
           </span>
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">게놈트리(Genome Tree) 바이오 테크놀로지</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">MaleGinkgo 바이오 테크놀로지</h2>
           <p className="text-stone-300 text-xs md:text-sm leading-relaxed">
             인간 유전체의 약 3.5배에 달하는 대용량 거대 게놈(Giant Genome)을 정밀 해독하여 탄생한 스마트 가로수 솔루션.
             DNA 레벨에서 암수 성별과 약리 물질 합성 능력을 사전에 100% 감별·보증하여 냄새 없고 고부가 가치를 실현하는 새로운 도시 산림의 미래를 엽니다.

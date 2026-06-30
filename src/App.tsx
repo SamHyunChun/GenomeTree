@@ -247,7 +247,7 @@ export default function App() {
               </div>
               <div>
                 <span className="text-lg font-black tracking-tight text-stone-900 font-sans flex items-center gap-1">
-                  GenomeTree <span className="text-xs bg-emerald-50 text-emerald-800 font-normal border border-emerald-100 px-1.5 py-0.5 rounded">스마트팜 묘목 직매장</span>
+                  MaleGinkgo <span className="text-xs bg-emerald-50 text-emerald-800 font-normal border border-emerald-100 px-1.5 py-0.5 rounded">스마트팜 묘목 직매장</span>
                 </span>
                 <p className="text-[9px] text-stone-400 -mt-0.5 font-mono">DNA-Certified Premium Saplings</p>
               </div>
@@ -745,14 +745,14 @@ export default function App() {
             <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
               <Leaf className="w-4.5 h-4.5" />
             </div>
-            <span className="font-bold text-white tracking-wider">GenomeTree Inc.</span>
+            <span className="font-bold text-white tracking-wider">MaleGinkgo Inc.</span>
           </div>
           <p className="text-[11px] text-stone-500 max-w-lg mx-auto leading-relaxed">
-            GenomeTree는 국가 유전 공학 분석 기술을 응용한 스마트 묘목 분양 전문 플랫폼입니다.<br />
+            MaleGinkgo는 국가 유전 공학 분석 기술을 응용한 스마트 묘목 분양 전문 플랫폼입니다.<br />
             무균 배양실 및 스마트 묘동 IoT 실시간 제어 설비를 통해 건강한 원종 복제를 완벽 보장합니다.
           </p>
           <div className="text-[10px] text-stone-600 font-mono">
-            © 2026 GenomeTree Co., Ltd. All rights reserved.
+            © 2026 MaleGinkgo Co., Ltd. All rights reserved.
           </div>
         </div>
       </footer>

@@ -34,7 +34,7 @@ export default function GinkgoEducation() {
       badge: '현장 실무 기술',
       period: '2026.08.10 ~ 2026.08.14 (5일 과정)',
       time: '매일 09:00 ~ 17:00 (총 40시간)',
-      location: 'GenomeTree 호남 교육농장 및 야외 실습장',
+      location: 'MaleGinkgo 호남 교육농장 및 야외 실습장',
       target: '조경 식재 숙련가, 굴취 반장 지망자 및 조경 전공자',
       capacity: '정원 15명 (선착순 마감)',
       fee: '무료 (국가 인적자원개발 컨소시엄 지원)',
@@ -47,7 +47,7 @@ export default function GinkgoEducation() {
         '단근(뿌리끊기) 조치 후 세근(잔뿌리) 발생 유도 기술'
       ],
       benefits: [
-        'GenomeTree 공식 1급 굴취전문 기술 이수증 발급',
+        'MaleGinkgo 공식 1급 굴취전문 기술 이수증 발급',
         '우수 수료자 전국 조경 연합 굴취조 우선 취업 매칭 연계',
         '실습용 안전 장구(보호구, 정밀 전정가위 등) 전원 무상 제공'
       ],
@@ -75,7 +75,7 @@ export default function GinkgoEducation() {
       ],
       benefits: [
         '산림 바이오 테크놀로지 실무 분석 자격 부여',
-        'GenomeTree 보증 묘목 위탁 분석소 창업 컨설팅 지원',
+        'MaleGinkgo 보증 묘목 위탁 분석소 창업 컨설팅 지원',
         '수나무 감별 전용 간이 PCR 키트 1세트 기념 증정'
       ],
       gradient: 'from-indigo-500/10 via-indigo-600/5 to-transparent border-indigo-200/50',
@@ -102,7 +102,7 @@ export default function GinkgoEducation() {
       ],
       benefits: [
         '조경수 전문 안전운송 우수 차주 인증 마크 부여',
-        'GenomeTree 플랫폼 화물 예약 시 배차 우선 순위 가산점',
+        'MaleGinkgo 플랫폼 화물 예약 시 배차 우선 순위 가산점',
         '화물 운전 장거리 특화 무릎 보호대 패키지 지원'
       ],
       gradient: 'from-emerald-500/10 via-emerald-600/5 to-transparent border-emerald-200/50',
@@ -163,7 +163,7 @@ export default function GinkgoEducation() {
         <div className="relative z-10 space-y-3 max-w-2xl">
           <span className="bg-white/20 text-white border border-white/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
             <GraduationCap className="w-3.5 h-3.5" />
-            GenomeTree 인재 양성 아카데미
+            MaleGinkgo 인재 양성 아카데미
           </span>
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">전통 임업의 미래를 여는 현장 맞춤형 교육 프로그램</h2>
           <p className="text-teal-50 text-xs md:text-sm leading-relaxed">
@@ -386,7 +386,7 @@ export default function GinkgoEducation() {
               <HelpCircle className="w-4.5 h-4.5 text-stone-400" />
               <span>단체 및 기업 맞춤식 위탁 교육 설계 문의: 02-555-TREE</span>
             </div>
-            <span>GenomeTree 아카데미 본부</span>
+            <span>MaleGinkgo 아카데미 본부</span>
           </div>
 
         </div>

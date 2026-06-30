@@ -156,7 +156,7 @@ export async function createOrder(orderInfo: any, cartItems: any[]) {
           <h2 className="text-lg font-bold">1단계 &amp; 3단계: Supabase 아키텍처 및 연동 설계도</h2>
         </div>
         <p className="text-xs text-stone-300 leading-relaxed max-w-2xl">
-          GenomeTree 스마트 양묘 농가 직거래 시스템을 실제 Supabase 백엔드 데이터베이스와 즉시 연동하기 위해 설계한 최적화 스키마, 폴더 트리 구조, 그리고 비동기 연동 제어 함수 블루프린트입니다.
+          MaleGinkgo 스마트 양묘 농가 직거래 시스템을 실제 Supabase 백엔드 데이터베이스와 즉시 연동하기 위해 설계한 최적화 스키마, 폴더 트리 구조, 그리고 비동기 연동 제어 함수 블루프린트입니다.
         </p>
       </div>
 
