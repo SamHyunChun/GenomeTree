@@ -7,7 +7,7 @@ interface ProductSectionProps {
   onAddToCart: (product: Product) => void;
 }
 
-type CategoryFilter = 'all' | 'ginkgo' | 'chionanthus' | 'apple' | 'grape' | 'larch' | 'tulip';
+type CategoryFilter = 'all' | 'ginkgo';
 
 export default function ProductSection({ products, onAddToCart }: ProductSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
@@ -18,11 +18,6 @@ export default function ProductSection({ products, onAddToCart }: ProductSection
   const categories: { key: CategoryFilter; name: string }[] = [
     { key: 'all', name: '전체 수종' },
     { key: 'ginkgo', name: '은행 수나무' },
-    { key: 'chionanthus', name: '이팝나무' },
-    { key: 'apple', name: '사과나무 (과수)' },
-    { key: 'grape', name: '포도나무 (과수)' },
-    { key: 'larch', name: '낙엽송 (조림)' },
-    { key: 'tulip', name: '백합나무 (조림)' },
   ];
 
   // Certification types for sub-filtering

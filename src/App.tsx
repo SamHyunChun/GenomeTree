@@ -13,6 +13,12 @@ import NFCScanner from './components/NFCScanner';
 import CartAndCheckout from './components/CartAndCheckout';
 import AdminPanel from './components/AdminPanel';
 import SupabaseGuide from './components/SupabaseGuide';
+import GinkgoWholesalersBanner from './components/GinkgoWholesalersBanner';
+import CargoDispatch from './components/CargoDispatch';
+import LaborBrokerage from './components/LaborBrokerage';
+import GinkgoStory from './components/GinkgoStory';
+import GenomeTreeIntro from './components/GenomeTreeIntro';
+import GinkgoEducation from './components/GinkgoEducation';
 
 // Icon imports
 import {
@@ -39,6 +45,8 @@ export default function App() {
 
   // Current view tab
   const [activeTab, setActiveTab] = useState<'market' | 'trace' | 'cart' | 'admin' | 'supabase'>('market');
+  const [marketSubTab, setMarketSubTab] = useState<'genome' | 'wholesalers' | 'dna' | 'seedling' | 'cargo' | 'manpower' | 'story' | 'education'>('dna');
+  const [showDnaSeedling, setShowDnaSeedling] = useState(true);
 
   // Interactive Live Weather & IoT Simulation
   useEffect(() => {
@@ -229,7 +237,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => setActiveTab('market')}>
+            <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => {
+              setActiveTab('market');
+              setMarketSubTab('dna');
+              setShowDnaSeedling(true);
+            }}>
               <div className="w-9 h-9 bg-emerald-700 rounded-xl flex items-center justify-center text-white shadow-sm shadow-emerald-700/20">
                 <Leaf className="w-5 h-5" />
               </div>
@@ -245,7 +257,11 @@ export default function App() {
             <nav className="hidden md:flex items-center gap-1.5 text-xs font-semibold">
               <button
                 id="tab-market"
-                onClick={() => setActiveTab('market')}
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('dna');
+                  setShowDnaSeedling(true);
+                }}
                 className={`px-4 py-2 rounded-xl transition-all ${
                   activeTab === 'market'
                     ? 'bg-emerald-50 text-emerald-800 font-bold'
@@ -324,6 +340,149 @@ export default function App() {
                 )}
               </button>
             </div>
+          </div>
+        </div>
+
+        {/* Secondary Navigation Row (Sub-Tabs) */}
+        <div className="border-t border-stone-100 bg-stone-50/70 py-1.5 shadow-[inset_0_-1px_0_rgba(0,0,0,0.05)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div className="flex items-center gap-1 overflow-x-auto scrollbar-none py-1">
+              <button
+                id="subtab-genome"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('genome');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'genome'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                게놈트리 소개
+              </button>
+
+              <button
+                id="subtab-story"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('story');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'story'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                은행나무 이야기
+              </button>
+
+              <button
+                id="subtab-wholesalers"
+                onClick={() => {
+                  setActiveTab('market');
+                  if (marketSubTab === 'wholesalers') {
+                    setShowDnaSeedling(prev => !prev);
+                  } else {
+                    setMarketSubTab('wholesalers');
+                    setShowDnaSeedling(true);
+                  }
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'wholesalers'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                타 사업자 은행나무 보유현황
+              </button>
+
+              <button
+                id="subtab-cargo"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('cargo');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'cargo'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                전국 화물 배차
+              </button>
+
+              <button
+                id="subtab-manpower"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('manpower');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'manpower'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                굴취인력 중개
+              </button>
+
+              <button
+                id="subtab-education"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('education');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'education'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                교육 프로그램
+              </button>
+
+              {showDnaSeedling && (
+                <>
+                  <button
+                    id="subtab-dna"
+                    onClick={() => {
+                      setActiveTab('market');
+                      setMarketSubTab('dna');
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap animate-fade-in ${
+                      activeTab === 'market' && marketSubTab === 'dna'
+                        ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                        : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                    }`}
+                  >
+                    DNA인증묘
+                  </button>
+
+                  <button
+                    id="subtab-seedling"
+                    onClick={() => {
+                      setActiveTab('market');
+                      setMarketSubTab('seedling');
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap animate-fade-in ${
+                      activeTab === 'market' && marketSubTab === 'seedling'
+                        ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                        : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                    }`}
+                  >
+                    실생묘
+                  </button>
+                </>
+              )}
+            </div>
+
+
           </div>
         </div>
       </header>
@@ -443,24 +602,101 @@ export default function App() {
         {/* Tab views layout switches */}
         {activeTab === 'market' && (
           <div className="space-y-8 animate-fade-in">
-            {/* Live Environment Monitoring */}
-            <SmartFarmStatusCard
-              status={smartFarmStatus}
-              onToggleIrrigation={handleToggleIrrigation}
-              onToggleFan={handleToggleFan}
-            />
+            {/* 0. Genome Tree Introduction Tab */}
+            {marketSubTab === 'genome' && (
+              <div className="animate-fade-in">
+                <GenomeTreeIntro />
+              </div>
+            )}
 
-            {/* Product catalog title */}
-            <div className="border-l-4 border-emerald-600 pl-4 py-1">
-              <h2 className="text-xl font-extrabold text-stone-900 tracking-tight">DNA 보증 묘목 품종 분양관</h2>
-              <p className="text-xs text-stone-500 mt-1">원하시는 우량 수종을 클릭하여 카트에 담아 주문할 수 있습니다.</p>
-            </div>
+            {/* 1. Wholesalers Directory Tab */}
+            {marketSubTab === 'wholesalers' && (
+              <div className="space-y-6 animate-fade-in">
+                <GinkgoWholesalersBanner />
+              </div>
+            )}
 
-            {/* Catalog */}
-            <ProductSection
-              products={products}
-              onAddToCart={handleAddToCart}
-            />
+            {/* 2. Clonal DNA Certified Plants Tab */}
+            {marketSubTab === 'dna' && (
+              <div className="space-y-8 animate-fade-in">
+                {/* Live Environment Monitoring */}
+                <SmartFarmStatusCard
+                  status={smartFarmStatus}
+                  onToggleIrrigation={handleToggleIrrigation}
+                  onToggleFan={handleToggleFan}
+                />
+
+                {/* Product catalog title */}
+                <div className="border-l-4 border-emerald-600 pl-4 py-1">
+                  <h2 className="text-xl font-extrabold text-stone-900 tracking-tight">DNA 보증 클론 묘목 분양관</h2>
+                  <p className="text-xs text-stone-500 mt-1">첨단 연구시설에서 특화 생산되어 100% 품종과 무취/우량 유전자가 검증 완료된 명품 수나무 묘동입니다.</p>
+                </div>
+
+                {/* Catalog (DNA Clones Only) */}
+                <ProductSection
+                  products={products.filter(p => p.certificationType !== '일반 실생')}
+                  onAddToCart={handleAddToCart}
+                />
+              </div>
+            )}
+
+            {/* 3. Seed-Grown Seedlings Tab */}
+            {marketSubTab === 'seedling' && (
+              <div className="space-y-8 animate-fade-in">
+                {/* Seed-grown seedling educational tip box */}
+                <div className="bg-gradient-to-r from-stone-50 to-stone-100 p-5 rounded-2xl border border-stone-200 flex flex-col md:flex-row md:items-center gap-4">
+                  <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center font-bold text-xl border border-amber-100 flex-shrink-0">
+                    🌱
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-sm text-stone-900">보급형 실생묘 (Seed-grown Seedlings) 분양관</h3>
+                    <p className="text-xs text-stone-500 mt-1 leading-relaxed">
+                      실생묘는 엄선된 정품 종자(은행/이팝나무 씨앗)를 직파종하여 키운 자연 양묘 상품입니다. DNA 복제 클론묘에 비해 개당 가격이 절반 이하로 매우 실용적이며, 임야 대규모 식림이나 완충 조경 녹지 조성 시 비용 절감 효과가 매우 탁월합니다.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Product catalog title */}
+                <div className="border-l-4 border-stone-500 pl-4 py-1">
+                  <h2 className="text-xl font-extrabold text-stone-900 tracking-tight">대량 녹화용 실생 묘목 상품</h2>
+                  <p className="text-xs text-stone-500 mt-1">대규모 시공 계약 및 화물 묶음 배차 상담 가능합니다.</p>
+                </div>
+
+                {/* Catalog (Seedlings Only) */}
+                <ProductSection
+                  products={products.filter(p => p.certificationType === '일반 실생')}
+                  onAddToCart={handleAddToCart}
+                />
+              </div>
+            )}
+
+            {/* 4. National Cargo Dispatch Tab */}
+            {marketSubTab === 'cargo' && (
+              <div className="animate-fade-in">
+                <CargoDispatch />
+              </div>
+            )}
+
+            {/* 5. Tree Digging Labor Brokerage Tab */}
+            {marketSubTab === 'manpower' && (
+              <div className="animate-fade-in">
+                <LaborBrokerage />
+              </div>
+            )}
+
+            {/* 5.1. Ginkgo Education Tab */}
+            {marketSubTab === 'education' && (
+              <div className="animate-fade-in">
+                <GinkgoEducation />
+              </div>
+            )}
+
+            {/* 6. Ginkgo Story Tab */}
+            {marketSubTab === 'story' && (
+              <div className="animate-fade-in">
+                <GinkgoStory />
+              </div>
+            )}
           </div>
         )}
 

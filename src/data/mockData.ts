@@ -41,127 +41,32 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: '강인한 순화 과정을 마친 1년생 은행 수나무 묘목입니다. 즉시 이식 및 조경공사 시공이 가능할 만큼 수형과 뿌리 발달이 매우 우수합니다.',
     imageUrl: '/src/assets/images/ginkgo_sapling_pot_1782627673310.jpg'
   },
-  // Chionanthus (이팝나무)
+  // Seed-Grown Seedlings (실생묘)
   {
-    id: 'chionanthus-cutting',
-    category: 'chionanthus',
-    categoryKo: '이팝나무',
-    name: 'DNA인증 이팝 수나무 우수 삽수',
-    specification: '모수 직채취 삽수',
-    price: 800,
-    stock: 50000,
+    id: 'ginkgo-seedling-1y',
+    category: 'ginkgo',
+    categoryKo: '일반 실생묘',
+    name: '일반 실생 은행나무 묘목 (1년생)',
+    specification: '노지포트, 평균 수고 25-35cm, 대량 다발포장 가능',
+    price: 1200,
+    stock: 95000,
     availableDate: '2026-07-20',
-    certificationType: 'DNA 인증',
-    description: '결실을 맺지 않아 알레르기 유발 및 가로 환경 훼손이 없는 이팝나무 수나무 우수 유전자 모수 삽수입니다.',
-    imageUrl: '/src/assets/images/chionanthus_cuttings_1782628083696.jpg'
+    certificationType: '일반 실생',
+    description: '은행나무 열매종자를 직접 파종하여 대량 생산한 일반 은행나무 실생묘입니다. 성별 구별이나 유전자 인증이 없는 실생 묘목으로, 임야 녹화나 산림 대량 식재용으로 매우 저렴하게 공급됩니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&q=80&w=400'
   },
   {
-    id: 'chionanthus-3m',
-    category: 'chionanthus',
-    categoryKo: '이팝나무',
-    name: 'DNA인증 이팝 수나무 묘목 (3개월생)',
-    specification: '포트묘, 평균 수고 10-15cm',
-    price: 3000,
-    stock: 30000,
-    availableDate: '2026-08-10',
-    certificationType: 'DNA 인증',
-    description: '바이오 실험실 수준의 무균 및 항온항습 설비에서 배양 및 순화된 차세대 환경 정화용 이팝나무 수나무 묘목입니다.',
-    imageUrl: '/src/assets/images/chionanthus_seedling_3m_1782628454337.jpg'
-  },
-  {
-    id: 'chionanthus-12m',
-    category: 'chionanthus',
-    categoryKo: '이팝나무',
-    name: 'DNA인증 이팝 수나무 묘목 (12개월생)',
-    specification: '포트/H0.5m 이상',
-    price: 8000,
-    stock: 5000,
-    availableDate: '2026-07-10',
-    certificationType: 'DNA 인증',
-    description: '활착력이 검증되어 외부 가로수 및 정원수로 인기가 높고, 우수한 병충해 저항성을 가진 이팝 수나무 야외 순화 묘목입니다.',
-    imageUrl: '/src/assets/images/chionanthus_outdoor_12m_1782629281282.jpg'
-  },
-  // Apple (사과나무)
-  {
-    id: 'apple-virus-free',
-    category: 'apple',
-    categoryKo: '사과나무',
-    name: '무독성 인증 사과나무 우량 대목묘',
-    specification: 'M9 대목, 무독성 보증',
-    price: 15000,
-    stock: 2000,
-    availableDate: '2026-10-15',
-    certificationType: '무독성 인증',
-    description: '주요 바이러스 및 바이로이드 5종이 없는 것으로 정식 공인 인증을 받은 고밀도 식재용 M9 사과 대목 및 보증 묘목입니다.',
-    imageUrl: '/src/assets/images/apple_diagnostic_kit_1782632408324.jpg'
-  },
-  {
-    id: 'apple-mother',
-    category: 'apple',
-    categoryKo: '사과나무',
-    name: '원종 인증 사과나무 품종 묘목',
-    specification: '특등 품종묘 (홍로/후지 계열)',
-    price: 25000,
-    stock: 500,
-    availableDate: '2026-10-20',
-    certificationType: '원종 인증',
-    description: '우수한 유전 특성을 엄격히 보존하고 있는 원종(Mother Tree)에서 직접 유래된 사과나무 정품 묘목으로, 고품질 과실 생산용 농가에 적극 추천합니다.',
-    imageUrl: '/src/assets/images/apple_mother_sapling_1782632618568.jpg'
-  },
-  // Grape (포도나무)
-  {
-    id: 'grape-virus-free',
-    category: 'grape',
-    categoryKo: '포도나무',
-    name: '무독성 인증 포도 우수 포트묘',
-    specification: '샤인머스캣 대목묘, 무독묘',
-    price: 12000,
-    stock: 3000,
-    availableDate: '2026-11-01',
-    certificationType: '무독성 인증',
-    description: '엽권바이러스, 사상체바이러스 등 주요 병해를 완벽 차단해 초기 생장력과 당도 발현율을 극대화한 포도나무 묘목입니다.',
-    imageUrl: '/src/assets/images/grape_diagnostic_kit_1782632998027.jpg'
-  },
-  {
-    id: 'grape-mother',
-    category: 'grape',
-    categoryKo: '포도나무',
-    name: '원종 인증 프리미엄 포도 묘목',
-    specification: '캠벨/샤인머스캣 순종 계통',
-    price: 20000,
-    stock: 800,
-    availableDate: '2026-10-25',
-    certificationType: '원종 인증',
-    description: '인증받은 유전자 원종 보존림에서 엄격한 자격 기준에 따라 출처가 추적 및 증명된 대한민국 최고급 포도나무 정통 묘목입니다.',
-    imageUrl: '/src/assets/images/grape_mother_sapling_1782633454575.jpg'
-  },
-  // Larch (낙엽송)
-  {
-    id: 'larch-dna',
-    category: 'larch',
-    categoryKo: '낙엽송',
-    name: 'DNA마커 인증 우량 낙엽송 묘목',
-    specification: '산림청 지정 클론, 멀티포트',
-    price: 4000,
-    stock: 20000,
-    availableDate: '2026-09-01',
-    certificationType: 'DNA마커 인증',
-    description: '산림청 지정 최고 등급 수형목(Plus Tree)의 DNA 클론 일치 여부를 DNA 마커 유전자 분석법으로 확정 판정받은 속성 목재용 우량 묘목입니다.',
-    imageUrl: '/src/assets/images/larch_multiport_seedlings_1782633996555.jpg'
-  },
-  // Tulip Tree (백합나무)
-  {
-    id: 'tulip-dna',
-    category: 'tulip',
-    categoryKo: '백합나무',
-    name: 'DNA마커 인증 고품질 백합나무 묘목',
-    specification: '생장 속도 1.5배 탄소 저감 우수종',
-    price: 4500,
-    stock: 15000,
-    availableDate: '2026-09-05',
-    certificationType: 'DNA마커 인증',
-    description: '탄소 흡수 능력이 압도적으로 탁월하고 생장 속도가 타 수종 대비 월등히 빠른 백합나무 중에서도 DNA 검증이 정밀 완료된 보증 묘목입니다.',
-    imageUrl: '/src/assets/images/tulip_tree_flower_1782634228959.jpg'
+    id: 'ginkgo-seedling-2y',
+    category: 'ginkgo',
+    categoryKo: '일반 실생묘',
+    name: '일반 실생 은행나무 묘목 (2년생 특묘)',
+    specification: '노지묘, 평균 수고 60-80cm, 뿌리분 결속',
+    price: 2500,
+    stock: 25000,
+    availableDate: '2026-07-15',
+    certificationType: '일반 실생',
+    description: '2년 동안 노지에서 튼튼하게 자라 뿌리가 튼실하고 대 기후 적응을 마친 보급형 은행나무 실생 특수 묘목입니다. 유전자 감정은 미필이나 생명력이 강합니다.',
+    imageUrl: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=400'
   }
 ];
 

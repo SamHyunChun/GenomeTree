@@ -7,7 +7,7 @@ export interface Product {
   price: number;
   stock: number;
   availableDate: string;
-  certificationType: 'DNA 인증' | '무독성 인증' | '원종 인증' | 'DNA마커 인증';
+  certificationType: 'DNA 인증' | '무독성 인증' | '원종 인증' | 'DNA마커 인증' | '일반 실생';
   description: string;
   imageUrl?: string;
 }
