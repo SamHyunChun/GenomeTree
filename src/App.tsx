@@ -19,6 +19,7 @@ import LaborBrokerage from './components/LaborBrokerage';
 import GinkgoStory from './components/GinkgoStory';
 import GenomeTreeIntro from './components/GenomeTreeIntro';
 import GinkgoEducation from './components/GinkgoEducation';
+import BiodiversityAudit from './components/BiodiversityAudit';
 
 // Icon imports
 import {
@@ -45,7 +46,7 @@ export default function App() {
 
   // Current view tab
   const [activeTab, setActiveTab] = useState<'market' | 'trace' | 'cart' | 'admin' | 'supabase'>('market');
-  const [marketSubTab, setMarketSubTab] = useState<'genome' | 'wholesalers' | 'dna' | 'seedling' | 'cargo' | 'manpower' | 'story' | 'education'>('dna');
+  const [marketSubTab, setMarketSubTab] = useState<'genome' | 'wholesalers' | 'dna' | 'seedling' | 'cargo' | 'manpower' | 'story' | 'education' | 'biodiversity'>('dna');
   const [showDnaSeedling, setShowDnaSeedling] = useState(true);
 
   // Interactive Live Weather & IoT Simulation
@@ -383,12 +384,8 @@ export default function App() {
                 id="subtab-wholesalers"
                 onClick={() => {
                   setActiveTab('market');
-                  if (marketSubTab === 'wholesalers') {
-                    setShowDnaSeedling(prev => !prev);
-                  } else {
-                    setMarketSubTab('wholesalers');
-                    setShowDnaSeedling(true);
-                  }
+                  setMarketSubTab('wholesalers');
+                  setShowDnaSeedling(false);
                 }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
                   activeTab === 'market' && marketSubTab === 'wholesalers'
@@ -445,6 +442,22 @@ export default function App() {
                 }`}
               >
                 교육 프로그램
+              </button>
+
+              <button
+                id="subtab-biodiversity"
+                onClick={() => {
+                  setActiveTab('market');
+                  setMarketSubTab('biodiversity');
+                  setShowDnaSeedling(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
+                  activeTab === 'market' && marketSubTab === 'biodiversity'
+                    ? 'bg-emerald-50 text-emerald-800 font-bold border border-emerald-200/50 shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-100 border border-transparent'
+                }`}
+              >
+                생물다양성 실사
               </button>
 
               {showDnaSeedling && (
@@ -613,6 +626,54 @@ export default function App() {
             {marketSubTab === 'wholesalers' && (
               <div className="space-y-6 animate-fade-in">
                 <GinkgoWholesalersBanner />
+                
+                {/* 하단 탭바 영역 렌더링 */}
+                <div className="bg-white border border-stone-200 rounded-3xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-sm animate-fade-in">
+                  <div className="space-y-1 text-left">
+                    <p className="text-emerald-800 font-extrabold text-sm flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      MaleGinkgo 전문관 및 생태 실증 서비스 바로가기
+                    </p>
+                    <p className="text-xs text-stone-500">
+                      당사 직영 우량 유전 감별 묘동 상품 및 현장 환경 분석 시스템으로 신속하게 이동해 보실 수 있습니다.
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-1.5 bg-stone-50 p-1.5 rounded-2xl border border-stone-200/80 w-fit self-start md:self-center">
+                    <button
+                      onClick={() => {
+                        setActiveTab('market');
+                        setMarketSubTab('dna');
+                        setShowDnaSeedling(true);
+                      }}
+                      className="px-4 py-2 bg-white hover:bg-emerald-50 text-stone-600 hover:text-emerald-800 font-bold text-xs rounded-xl border border-stone-200/60 hover:border-emerald-200/60 shadow-xs transition active:scale-[0.98]"
+                    >
+                      DNA인증묘
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        setActiveTab('market');
+                        setMarketSubTab('seedling');
+                        setShowDnaSeedling(true);
+                      }}
+                      className="px-4 py-2 bg-white hover:bg-emerald-50 text-stone-600 hover:text-emerald-800 font-bold text-xs rounded-xl border border-stone-200/60 hover:border-emerald-200/60 shadow-xs transition active:scale-[0.98]"
+                    >
+                      실생묘
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        setActiveTab('market');
+                        setMarketSubTab('biodiversity');
+                        setShowDnaSeedling(false);
+                      }}
+                      className="px-4 py-2 bg-white hover:bg-emerald-50 text-stone-600 hover:text-emerald-800 font-bold text-xs rounded-xl border border-stone-200/60 hover:border-emerald-200/60 shadow-xs transition active:scale-[0.98]"
+                    >
+                      생물다양성 실사
+                    </button>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -667,6 +728,12 @@ export default function App() {
                   products={products.filter(p => p.certificationType === '일반 실생')}
                   onAddToCart={handleAddToCart}
                 />
+              </div>
+            )}
+
+            {marketSubTab === 'biodiversity' && (
+              <div className="animate-fade-in">
+                <BiodiversityAudit />
               </div>
             )}
 
